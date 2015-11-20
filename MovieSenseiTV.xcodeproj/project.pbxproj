@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2994FE11BFFABF500F27627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2994FE01BFFABF500F27627 /* AppDelegate.swift */; };
+		A2994FE31BFFABF500F27627 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2994FE21BFFABF500F27627 /* FirstViewController.swift */; };
+		A2994FE51BFFABF500F27627 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2994FE41BFFABF500F27627 /* SecondViewController.swift */; };
+		A2994FE81BFFABF500F27627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2994FE61BFFABF500F27627 /* Main.storyboard */; };
+		A2994FEA1BFFABF500F27627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2994FE91BFFABF500F27627 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2994FDD1BFFABF500F27627 /* MovieSenseiTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSenseiTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2994FE01BFFABF500F27627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A2994FE21BFFABF500F27627 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		A2994FE41BFFABF500F27627 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A2994FE71BFFABF500F27627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2994FE91BFFABF500F27627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2994FEB1BFFABF500F27627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2994FDA1BFFABF500F27627 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2994FD41BFFABF500F27627 = {
+			isa = PBXGroup;
+			children = (
+				A2994FDF1BFFABF500F27627 /* MovieSenseiTV */,
+				A2994FDE1BFFABF500F27627 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2994FDE1BFFABF500F27627 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2994FDD1BFFABF500F27627 /* MovieSenseiTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2994FDF1BFFABF500F27627 /* MovieSenseiTV */ = {
+			isa = PBXGroup;
+			children = (
+				A2994FE01BFFABF500F27627 /* AppDelegate.swift */,
+				A2994FE21BFFABF500F27627 /* FirstViewController.swift */,
+				A2994FE41BFFABF500F27627 /* SecondViewController.swift */,
+				A2994FE61BFFABF500F27627 /* Main.storyboard */,
+				A2994FE91BFFABF500F27627 /* Assets.xcassets */,
+				A2994FEB1BFFABF500F27627 /* Info.plist */,
+			);
+			path = MovieSenseiTV;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2994FDC1BFFABF500F27627 /* MovieSenseiTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2994FEE1BFFABF500F27627 /* Build configuration list for PBXNativeTarget "MovieSenseiTV" */;
+			buildPhases = (
+				A2994FD91BFFABF500F27627 /* Sources */,
+				A2994FDA1BFFABF500F27627 /* Frameworks */,
+				A2994FDB1BFFABF500F27627 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MovieSenseiTV;
+			productName = MovieSenseiTV;
+			productReference = A2994FDD1BFFABF500F27627 /* MovieSenseiTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2994FD51BFFABF500F27627 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = dna;
+				TargetAttributes = {
+					A2994FDC1BFFABF500F27627 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = A2994FD81BFFABF500F27627 /* Build configuration list for PBXProject "MovieSenseiTV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2994FD41BFFABF500F27627;
+			productRefGroup = A2994FDE1BFFABF500F27627 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2994FDC1BFFABF500F27627 /* MovieSenseiTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2994FDB1BFFABF500F27627 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2994FEA1BFFABF500F27627 /* Assets.xcassets in Resources */,
+				A2994FE81BFFABF500F27627 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2994FD91BFFABF500F27627 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2994FE51BFFABF500F27627 /* SecondViewController.swift in Sources */,
+				A2994FE11BFFABF500F27627 /* AppDelegate.swift in Sources */,
+				A2994FE31BFFABF500F27627 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A2994FE61BFFABF500F27627 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2994FE71BFFABF500F27627 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2994FEC1BFFABF500F27627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		A2994FED1BFFABF500F27627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2994FEF1BFFABF500F27627 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = MovieSenseiTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dna.hobbyprogramming.MovieSenseiTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2994FF01BFFABF500F27627 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = MovieSenseiTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = dna.hobbyprogramming.MovieSenseiTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2994FD81BFFABF500F27627 /* Build configuration list for PBXProject "MovieSenseiTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2994FEC1BFFABF500F27627 /* Debug */,
+				A2994FED1BFFABF500F27627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2994FEE1BFFABF500F27627 /* Build configuration list for PBXNativeTarget "MovieSenseiTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2994FEF1BFFABF500F27627 /* Debug */,
+				A2994FF01BFFABF500F27627 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2994FD51BFFABF500F27627 /* Project object */;
+}
