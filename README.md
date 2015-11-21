@@ -8,3 +8,6 @@ Interesting SDKs:
 
 * Movie API
   * https://www.themoviedb.org/documentation/api (used in the iOS version)
+
+Useful links:
+* https://developer.apple.com/tvos/human-interface-guidelines/
