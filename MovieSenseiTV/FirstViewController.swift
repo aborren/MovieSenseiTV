@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.testNetwork()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -20,6 +22,12 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func testNetwork(){
+        Alamofire.request(.GET, "https://httpbin.org/get")
+            .responseJSON { response in
+                debugPrint(response)
+        }
+    }
 
 }
 

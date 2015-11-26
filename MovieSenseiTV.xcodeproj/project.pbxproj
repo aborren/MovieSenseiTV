@@ -12,6 +12,7 @@
 		A2994FE51BFFABF500F27627 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2994FE41BFFABF500F27627 /* SecondViewController.swift */; };
 		A2994FE81BFFABF500F27627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2994FE61BFFABF500F27627 /* Main.storyboard */; };
 		A2994FEA1BFFABF500F27627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2994FE91BFFABF500F27627 /* Assets.xcassets */; };
+		A2E77A071C079C9F00200064 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E77A061C079C9F00200064 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A2994FE71BFFABF500F27627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2994FE91BFFABF500F27627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2994FEB1BFFABF500F27627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2E77A061C079C9F00200064 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E77A071C079C9F00200064 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		A2994FD41BFFABF500F27627 = {
 			isa = PBXGroup;
 			children = (
+				A2E77A061C079C9F00200064 /* Alamofire.framework */,
 				A2994FDF1BFFABF500F27627 /* MovieSenseiTV */,
 				A2994FDE1BFFABF500F27627 /* Products */,
 			);
@@ -74,6 +78,7 @@
 				A2994FD91BFFABF500F27627 /* Sources */,
 				A2994FDA1BFFABF500F27627 /* Frameworks */,
 				A2994FDB1BFFABF500F27627 /* Resources */,
+				A2E77A081C079CD300200064 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -128,6 +133,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A2E77A081C079CD300200064 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/tvOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A2994FD91BFFABF500F27627 /* Sources */ = {
@@ -240,6 +262,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = MovieSenseiTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dna.hobbyprogramming.MovieSenseiTV;
@@ -253,6 +279,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = MovieSenseiTV/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dna.hobbyprogramming.MovieSenseiTV;
