@@ -11,15 +11,16 @@ import Alamofire
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var testLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.testNetwork()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        debugPrint("view 1 appeared :)")
+        self.testNetwork()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,7 +31,7 @@ class FirstViewController: UIViewController {
     func testNetwork(){
         Alamofire.request(.GET, "https://httpbin.org/get")
             .responseJSON { response in
-                debugPrint(response)
+                self.testLabel.text = response.description
         }
     }
 
