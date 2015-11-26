@@ -1,3 +1,4 @@
+
 //
 //  SecondViewController.swift
 //  MovieSenseiTV
@@ -12,6 +13,7 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        debugPrint("second view loaded")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
