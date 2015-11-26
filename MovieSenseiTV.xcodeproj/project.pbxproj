@@ -244,6 +244,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dna.hobbyprogramming.MovieSenseiTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f443d023-a93f-4078-95ef-e346676c8160";
 			};
 			name = Debug;
 		};
@@ -256,6 +257,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dna.hobbyprogramming.MovieSenseiTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f443d023-a93f-4078-95ef-e346676c8160";
 			};
 			name = Release;
 		};
@@ -278,6 +280,7 @@
 				A2994FF01BFFABF500F27627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
