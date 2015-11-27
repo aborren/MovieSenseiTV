@@ -12,8 +12,26 @@
 		A2994FE51BFFABF500F27627 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2994FE41BFFABF500F27627 /* SecondViewController.swift */; };
 		A2994FE81BFFABF500F27627 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2994FE61BFFABF500F27627 /* Main.storyboard */; };
 		A2994FEA1BFFABF500F27627 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2994FE91BFFABF500F27627 /* Assets.xcassets */; };
-		A2E77A071C079C9F00200064 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2E77A061C079C9F00200064 /* Alamofire.framework */; };
+		B2EA00D31C090A67005FEAD2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D21C090A67005FEAD2 /* Alamofire.framework */; };
+		B2EA00D41C090A67005FEAD2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D21C090A67005FEAD2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2EA00D71C090A6D005FEAD2 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */; };
+		B2EA00D81C090A6D005FEAD2 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B2EA00D51C090A67005FEAD2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B2EA00D81C090A6D005FEAD2 /* Kingfisher.framework in Embed Frameworks */,
+				B2EA00D41C090A67005FEAD2 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A2994FDD1BFFABF500F27627 /* MovieSenseiTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSenseiTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,7 +41,9 @@
 		A2994FE71BFFABF500F27627 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2994FE91BFFABF500F27627 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2994FEB1BFFABF500F27627 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2E77A061C079C9F00200064 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
+		B2697DB71C08FD26000FE08E /* MovieSenseiTV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MovieSenseiTV-Bridging-Header.h"; path = "MovieSenseiTV/MovieSenseiTV-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		B2EA00D21C090A67005FEAD2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
+		B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/tvOS/Kingfisher.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,7 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2E77A071C079C9F00200064 /* Alamofire.framework in Frameworks */,
+				B2EA00D71C090A6D005FEAD2 /* Kingfisher.framework in Frameworks */,
+				B2EA00D31C090A67005FEAD2 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,7 +62,8 @@
 		A2994FD41BFFABF500F27627 = {
 			isa = PBXGroup;
 			children = (
-				A2E77A061C079C9F00200064 /* Alamofire.framework */,
+				B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */,
+				B2EA00D21C090A67005FEAD2 /* Alamofire.framework */,
 				A2994FDF1BFFABF500F27627 /* MovieSenseiTV */,
 				A2994FDE1BFFABF500F27627 /* Products */,
 			);
@@ -61,11 +83,20 @@
 				A2994FE01BFFABF500F27627 /* AppDelegate.swift */,
 				A2994FE21BFFABF500F27627 /* FirstViewController.swift */,
 				A2994FE41BFFABF500F27627 /* SecondViewController.swift */,
+				B2697D821C08FC4A000FE08E /* External Libraries */,
 				A2994FE61BFFABF500F27627 /* Main.storyboard */,
 				A2994FE91BFFABF500F27627 /* Assets.xcassets */,
 				A2994FEB1BFFABF500F27627 /* Info.plist */,
 			);
 			path = MovieSenseiTV;
+			sourceTree = "<group>";
+		};
+		B2697D821C08FC4A000FE08E /* External Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				B2697DB71C08FD26000FE08E /* MovieSenseiTV-Bridging-Header.h */,
+			);
+			path = "External Libraries";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,6 +110,7 @@
 				A2994FDA1BFFABF500F27627 /* Frameworks */,
 				A2994FDB1BFFABF500F27627 /* Resources */,
 				A2E77A081C079CD300200064 /* ShellScript */,
+				B2EA00D51C090A67005FEAD2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -101,6 +133,7 @@
 				TargetAttributes = {
 					A2994FDC1BFFABF500F27627 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 7SX7NNMX7Q;
 					};
 				};
 			};
@@ -141,13 +174,13 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/Alamofire.framework",
+				"",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -262,6 +295,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dan Isacson (226ZEH3XFH)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer: Dan Isacson (226ZEH3XFH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
@@ -270,7 +305,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dna.hobbyprogramming.MovieSenseiTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f443d023-a93f-4078-95ef-e346676c8160";
+				PROVISIONING_PROFILE = "77a4f562-a305-4b24-80f0-aab65fda7110";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MovieSenseiTV/MovieSenseiTV-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -279,6 +315,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dan Isacson (226ZEH3XFH)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer: Dan Isacson (226ZEH3XFH)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
@@ -287,7 +325,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dna.hobbyprogramming.MovieSenseiTV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f443d023-a93f-4078-95ef-e346676c8160";
+				PROVISIONING_PROFILE = "77a4f562-a305-4b24-80f0-aab65fda7110";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MovieSenseiTV/MovieSenseiTV-Bridging-Header.h";
 			};
 			name = Release;
 		};
