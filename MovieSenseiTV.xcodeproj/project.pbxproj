@@ -16,6 +16,8 @@
 		B2EA00D41C090A67005FEAD2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D21C090A67005FEAD2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2EA00D71C090A6D005FEAD2 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */; };
 		B2EA00D81C090A6D005FEAD2 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B2EA00DA1C090E8F005FEAD2 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D91C090E8F005FEAD2 /* SwiftyJSON.framework */; };
+		B2EA00DB1C090E8F005FEAD2 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D91C090E8F005FEAD2 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +29,7 @@
 			files = (
 				B2EA00D81C090A6D005FEAD2 /* Kingfisher.framework in Embed Frameworks */,
 				B2EA00D41C090A67005FEAD2 /* Alamofire.framework in Embed Frameworks */,
+				B2EA00DB1C090E8F005FEAD2 /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,6 +47,7 @@
 		B2697DB71C08FD26000FE08E /* MovieSenseiTV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MovieSenseiTV-Bridging-Header.h"; path = "MovieSenseiTV/MovieSenseiTV-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		B2EA00D21C090A67005FEAD2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
 		B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/tvOS/Kingfisher.framework; sourceTree = "<group>"; };
+		B2EA00D91C090E8F005FEAD2 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/tvOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			files = (
 				B2EA00D71C090A6D005FEAD2 /* Kingfisher.framework in Frameworks */,
 				B2EA00D31C090A67005FEAD2 /* Alamofire.framework in Frameworks */,
+				B2EA00DA1C090E8F005FEAD2 /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +67,7 @@
 		A2994FD41BFFABF500F27627 = {
 			isa = PBXGroup;
 			children = (
+				B2EA00D91C090E8F005FEAD2 /* SwiftyJSON.framework */,
 				B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */,
 				B2EA00D21C090A67005FEAD2 /* Alamofire.framework */,
 				A2994FDF1BFFABF500F27627 /* MovieSenseiTV */,
