@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class FirstViewController: UIViewController {
 
@@ -20,7 +19,6 @@ class FirstViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        self.testNetwork()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,12 +26,6 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func testNetwork(){
-        Alamofire.request(.GET, "https://httpbin.org/get")
-            .responseJSON { response in
-                self.testLabel.text = response.description
-        }
-    }
 
 }
 
