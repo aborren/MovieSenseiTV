@@ -17,11 +17,11 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         debugPrint("second view loaded")
-        self.setupTestImage()
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        NetworkHandler.getMovieById("135397", callback: self.callback)
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,8 +29,10 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func setupTestImage(){
-        self.testimage.kf_setImageWithURL(NSURL(string: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT_oViOWTXEGGCQx77jw1EW56HHU1PEdpbP-6ZWNxmP7a0itxFnK8K5JQ")!)
+    func callback(movie: Movie?, error: NSError?){
+        if let url = movie?.getBackdropUrl(BackdropSize.w300) {
+            self.testimage.kf_setImageWithURL(url)
+        }
     }
 
 }

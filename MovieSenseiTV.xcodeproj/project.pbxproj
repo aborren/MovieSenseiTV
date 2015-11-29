@@ -20,6 +20,8 @@
 		A2EA78551C0A8D6F00AEDC2F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA78541C0A8D6F00AEDC2F /* Movie.swift */; };
 		A2EA78571C0A8DE800AEDC2F /* MoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA78561C0A8DE800AEDC2F /* MoviePreview.swift */; };
 		A2EA78591C0A90C100AEDC2F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA78581C0A90C100AEDC2F /* Configuration.swift */; };
+		A2EA785C1C0A95F600AEDC2F /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA785B1C0A95F600AEDC2F /* NetworkHandler.swift */; };
+		A2EA785E1C0A97E200AEDC2F /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA785D1C0A97E200AEDC2F /* APICall.swift */; };
 		B2EA00D31C090A67005FEAD2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D21C090A67005FEAD2 /* Alamofire.framework */; };
 		B2EA00D41C090A67005FEAD2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D21C090A67005FEAD2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2EA00D71C090A6D005FEAD2 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */; };
@@ -60,6 +62,8 @@
 		A2EA78541C0A8D6F00AEDC2F /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		A2EA78561C0A8DE800AEDC2F /* MoviePreview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePreview.swift; sourceTree = "<group>"; };
 		A2EA78581C0A90C100AEDC2F /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		A2EA785B1C0A95F600AEDC2F /* NetworkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		A2EA785D1C0A97E200AEDC2F /* APICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		B2697DB71C08FD26000FE08E /* MovieSenseiTV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MovieSenseiTV-Bridging-Header.h"; path = "MovieSenseiTV/MovieSenseiTV-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		B2EA00D21C090A67005FEAD2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
 		B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/tvOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 		A2994FDF1BFFABF500F27627 /* MovieSenseiTV */ = {
 			isa = PBXGroup;
 			children = (
+				A2EA785A1C0A95DF00AEDC2F /* Utilities */,
 				A2EA78481C0A872D00AEDC2F /* Models */,
 				A2994FE01BFFABF500F27627 /* AppDelegate.swift */,
 				A2994FE21BFFABF500F27627 /* FirstViewController.swift */,
@@ -135,6 +140,15 @@
 				A2EA78581C0A90C100AEDC2F /* Configuration.swift */,
 			);
 			path = TMDB;
+			sourceTree = "<group>";
+		};
+		A2EA785A1C0A95DF00AEDC2F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A2EA785B1C0A95F600AEDC2F /* NetworkHandler.swift */,
+				A2EA785D1C0A97E200AEDC2F /* APICall.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		B2697D821C08FC4A000FE08E /* External Libraries */ = {
@@ -246,6 +260,8 @@
 				A2994FE31BFFABF500F27627 /* FirstViewController.swift in Sources */,
 				A2EA784F1C0A89B900AEDC2F /* PosterSize.swift in Sources */,
 				A2EA78591C0A90C100AEDC2F /* Configuration.swift in Sources */,
+				A2EA785C1C0A95F600AEDC2F /* NetworkHandler.swift in Sources */,
+				A2EA785E1C0A97E200AEDC2F /* APICall.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
