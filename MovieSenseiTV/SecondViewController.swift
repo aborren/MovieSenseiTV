@@ -21,7 +21,14 @@ class SecondViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        NetworkHandler.getMovieById("135397", callback: self.callback)
+        NetworkHandler.getMovieById("4476", callback: self.callback)
+        NetworkHandler.getMoviesPopular(1) { (movies, error) -> () in
+            if let m = movies {
+                for x in m {
+                    debugPrint(x.getBackdropUrl(BackdropSize.original))
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,9 +37,10 @@ class SecondViewController: UIViewController {
     }
 
     func callback(movie: Movie?, error: NSError?){
-        if let url = movie?.getBackdropUrl(BackdropSize.w300) {
+        if let url = movie?.getBackdropUrl(BackdropSize.original) {
             self.testimage.kf_setImageWithURL(url)
         }
+        debugPrint(movie?.getGenreNamesSeparatedBy(", "))
     }
 
 }

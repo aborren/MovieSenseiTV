@@ -13,4 +13,8 @@ struct APICall {
     static func movie(id: String)-> String {
         return baseUrl + "movie/\(id)"
     }
+    static let movieNowPlaying = baseUrl + "movie/now_playing"
+    static let moviePopular = baseUrl + "movie/popular"
+    static let movieTopRated = baseUrl + "movie/top_rated"
+    static let movieUpcoming = baseUrl + "movie/upcoming"
 }

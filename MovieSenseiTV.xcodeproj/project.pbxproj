@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A22FFEDA1C0B41E600325E5F /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22FFED91C0B41E600325E5F /* Genre.swift */; };
 		A2994FE11BFFABF500F27627 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2994FE01BFFABF500F27627 /* AppDelegate.swift */; };
 		A2994FE31BFFABF500F27627 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2994FE21BFFABF500F27627 /* FirstViewController.swift */; };
 		A2994FE51BFFABF500F27627 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2994FE41BFFABF500F27627 /* SecondViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A22FFED91C0B41E600325E5F /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		A2994FDD1BFFABF500F27627 /* MovieSenseiTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSenseiTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2994FE01BFFABF500F27627 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2994FE21BFFABF500F27627 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				A2EA78541C0A8D6F00AEDC2F /* Movie.swift */,
 				A2EA78561C0A8DE800AEDC2F /* MoviePreview.swift */,
 				A2EA78581C0A90C100AEDC2F /* Configuration.swift */,
+				A22FFED91C0B41E600325E5F /* Genre.swift */,
 			);
 			path = TMDB;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				A2EA78591C0A90C100AEDC2F /* Configuration.swift in Sources */,
 				A2EA785C1C0A95F600AEDC2F /* NetworkHandler.swift in Sources */,
 				A2EA785E1C0A97E200AEDC2F /* APICall.swift in Sources */,
+				A22FFEDA1C0B41E600325E5F /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
