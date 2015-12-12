@@ -15,7 +15,7 @@ class NetworkHandler {
     private static let APIKey = "9e4746b32f8e924b795985cc297a518f"
     private static let parameter: [String:AnyObject] = ["api_key":NetworkHandler.APIKey]
     
-    static func getMovieById(id: String, callback: (movie: Movie?, error: NSError?)->()) {
+    static func getMovieById(id: String, callback: (movie: Movie?, error: NSError?)->() ) {
         Alamofire.request(.GET, APICall.movie(id), parameters: NetworkHandler.parameter)
         .responseJSON { response in
             switch response.result {
