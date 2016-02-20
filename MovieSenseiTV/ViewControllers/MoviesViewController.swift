@@ -15,11 +15,18 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     let genres: [String] = ["action", "drama", "comedy", "romance", "family", "horror"]
     
     var popularMovies: [MoviePreview] = []
+    var upcomingMovies: [MoviePreview] = []
+    var topRatedMovies: [MoviePreview] = []
+    var nowPlayingMovies: [MoviePreview] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         NetworkHandler.getMoviesPopular(1, callback: self.popularMoviesCallback)
+        NetworkHandler.getMoviesUpcoming(1, callback: self.upcomingMoviesCallback)
+        NetworkHandler.getMoviesTopRated(1, callback: self.topRatedMoviesCallback)
+        NetworkHandler.getMoviesNowPlaying(1, callback: self.nowPlayingMoviesCallback)
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,6 +62,28 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
             self.popularMovies = popularMovies
             self.tableView.reloadData()
         }
+    }
+    
+    func upcomingMoviesCallback(movies: [MoviePreview]?, error: NSError?){
+        if let upcomingMovies = movies{
+            self.upcomingMovies = upcomingMovies
+            self.tableView.reloadData()
+        }
+    }
+    
+    func topRatedMoviesCallback(movies: [MoviePreview]?, error: NSError?){
+        if let topRatedMovies = movies{
+            self.topRatedMovies = topRatedMovies
+            self.tableView.reloadData()
+        }
+    }
+    
+    func nowPlayingMoviesCallback(movies: [MoviePreview]?, error: NSError?){
+        if let nowPlayingMovies = movies{
+            self.nowPlayingMovies = nowPlayingMovies
+            self.tableView.reloadData()
+        }
+
     }
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
