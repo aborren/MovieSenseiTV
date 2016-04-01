@@ -10,6 +10,7 @@ import UIKit
 
 class MovieFirstPageTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {

@@ -23,6 +23,7 @@ class Movie {
     let tagline: String?
     let voteAverage: NSNumber?
     let voteCount: Int?
+    var trailers: [Trailer] = []
     
     init(json: JSON) {
         self.id = json["id"].int
@@ -38,11 +39,21 @@ class Movie {
         self.tagline = json["tagline"].string
         self.voteAverage = json["vote_average"].number
         self.voteCount = json["vote_count"].int
+        
+        if let trailerJSONArray = json["videos"]["results"].array {
+            for trailerJSON in trailerJSONArray {
+                self.trailers.append(Trailer(json: trailerJSON))
+            }
+            
+            self.trailers.forEach { trailer in
+                debugPrint(trailer.id)
+            }
+        }
     }
     
     private static func initGenresFromJSON(json: JSON) -> [Genre] {
         var genres: [Genre] = []
-        for var i = 0; i < json.count; i++ {
+        for i in 0..<json.count {
             let genre = Genre(json: json[i])
             genres.append(genre)
         }

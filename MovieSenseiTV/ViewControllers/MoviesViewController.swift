@@ -12,6 +12,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     @IBOutlet weak var tableView: UITableView!
     
+    let types: [String] = ["Upcoming", "Top rated", "Popular", "Now playing"]
     let genres: [String] = ["action", "drama", "comedy", "romance", "family", "horror"]
     
     var popularMovies: [MoviePreview] = []
@@ -27,6 +28,9 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
         NetworkHandler.getMoviesUpcoming(1, callback: self.upcomingMoviesCallback)
         NetworkHandler.getMoviesTopRated(1, callback: self.topRatedMoviesCallback)
         NetworkHandler.getMoviesNowPlaying(1, callback: self.nowPlayingMoviesCallback)
+        
+        self.tableView.estimatedRowHeight = 300
+        self.tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +40,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
-            return 4
+            return 5
     }
     
     func tableView(tableView: UITableView,
@@ -51,6 +55,7 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 cell = tableView.dequeueReusableCellWithIdentifier("movieCell",
                     forIndexPath: indexPath)
                 (cell as? MovieFirstPageTableViewCell)?.setCollectionViewDataSourceDelegate(self, forRow: indexPath.row)
+                (cell as? MovieFirstPageTableViewCell)?.typeLabel.text = self.types[indexPath.row - 1]
             }
             
             return cell
@@ -87,20 +92,14 @@ class MoviesViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
-        
-        
-        
-        /*if let prevcell = context.previouslyFocusedView as? testCell {
-        UIView.animateWithDuration(0.2, animations: { () -> Void in
-        prevcell.updateImageSize(self.originSize)
-        })
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let movieDetailsVC = segue.destinationViewController as? MovieDetailsViewController {
+            if let moviePreview = (sender as? MovieFirstPageCollectionViewCell)?.moviePreview {
+                movieDetailsVC.moviePreview = moviePreview
+            }
         }
-        
-        if let newcell = context.nextFocusedView as? testCell {
-        UIView.animateWithDuration(0.2, animations: { () -> Void in
-        newcell.updateImageSize(self.bigSize)
-        })
-        }*/
     }
     
 }
@@ -112,8 +111,17 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
             
             if collectionView.tag == 0 {
                 return self.genres.count
-            }else {
+            } else if collectionView.tag == 1 {
+                return self.upcomingMovies.count
+            }  else if collectionView.tag == 2 {
+                return self.topRatedMovies.count
+            } else if collectionView.tag == 3 {
                 return self.popularMovies.count
+            } else if collectionView.tag == 4 {
+                return self.nowPlayingMovies.count
+            }
+            else {
+                return 0
             }
     }
     
@@ -126,12 +134,30 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
                 forIndexPath: indexPath)
                 let genre = self.genres[indexPath.row]
                 (cell as? GenreCollectionViewCell)?.setImage(genre)
-            }else if collectionView.tag == 1 {
+            } else if collectionView.tag == 1 {
+                cell = collectionView.dequeueReusableCellWithReuseIdentifier("movieCollectionCell",
+                    forIndexPath: indexPath)
+                
+                let moviePreview = self.upcomingMovies[indexPath.row]
+                (cell as? MovieFirstPageCollectionViewCell)?.setup(moviePreview)
+            } else if collectionView.tag == 2 {
+                cell = collectionView.dequeueReusableCellWithReuseIdentifier("movieCollectionCell",
+                    forIndexPath: indexPath)
+                
+                let moviePreview = self.topRatedMovies[indexPath.row]
+                (cell as? MovieFirstPageCollectionViewCell)?.setup(moviePreview)
+            } else if collectionView.tag == 3 {
                 cell = collectionView.dequeueReusableCellWithReuseIdentifier("movieCollectionCell",
                     forIndexPath: indexPath)
                 
                 let moviePreview = self.popularMovies[indexPath.row]
-                (cell as? MovieFirstPageCollectionViewCell)?.setupImage(moviePreview)
+                (cell as? MovieFirstPageCollectionViewCell)?.setup(moviePreview)
+            } else if collectionView.tag == 4 {
+                cell = collectionView.dequeueReusableCellWithReuseIdentifier("movieCollectionCell",
+                    forIndexPath: indexPath)
+                
+                let moviePreview = self.nowPlayingMovies[indexPath.row]
+                (cell as? MovieFirstPageCollectionViewCell)?.setup(moviePreview)
             } else {
                 cell = collectionView.dequeueReusableCellWithReuseIdentifier("movieCollectionCell",
                     forIndexPath: indexPath)

@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MovieFirstPageCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    var moviePreview: MoviePreview?
     
-    func setupImage(moviePreview: MoviePreview){
+    func setup(moviePreview: MoviePreview){
+        self.moviePreview = moviePreview
+        
         if let url = moviePreview.getPosterUrl(PosterSize.w780) {
             self.imageView.kf_setImageWithURL(url)
         }

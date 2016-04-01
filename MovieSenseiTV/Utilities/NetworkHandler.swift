@@ -38,7 +38,7 @@ class NetworkHandler {
                     let json = JSON(data)["results"]
                     var moviePreviews: [MoviePreview] = []
             
-                    for(var i = 0; i < json.count; i++){
+                    for i in 0..<json.count {
                         moviePreviews.append(MoviePreview(json: json[i]))
                     }
                     

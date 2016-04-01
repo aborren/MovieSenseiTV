@@ -6,3 +6,5 @@ disabled_rules:
   - function_body_length
   - opening_brace
   - type_body_length
+  - valid_docs
+  - function_parameter_count
