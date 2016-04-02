@@ -333,7 +333,7 @@
                                         <rect key="frame" x="0.0" y="568" width="1920" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GSm-gS-GE1" id="bLI-Mh-aR8">
-                                            <rect key="frame" x="0.0" y="0.0" width="1904" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="1920" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJc-Hp-zdc">
@@ -344,15 +344,28 @@
                                                         <action selector="trailersButtonPressed:" destination="GSm-gS-GE1" eventType="primaryActionTriggered" id="Jsw-vd-bbZ"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsX-j9-JNL">
+                                                    <rect key="frame" x="50" y="106" width="207" height="74"/>
+                                                    <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                                    <state key="normal" title="Images"/>
+                                                    <connections>
+                                                        <action selector="imagesButtonPressed:" destination="GSm-gS-GE1" eventType="primaryActionTriggered" id="Lcf-be-fdS"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="CsX-j9-JNL" firstAttribute="top" secondItem="zJc-Hp-zdc" secondAttribute="bottom" constant="12" id="76X-zD-tUc"/>
                                                 <constraint firstItem="zJc-Hp-zdc" firstAttribute="top" secondItem="bLI-Mh-aR8" secondAttribute="top" constant="20" id="D86-F6-hCc"/>
-                                                <constraint firstAttribute="bottom" secondItem="zJc-Hp-zdc" secondAttribute="bottom" constant="106" id="Udt-Ay-99b"/>
+                                                <constraint firstItem="CsX-j9-JNL" firstAttribute="trailing" secondItem="zJc-Hp-zdc" secondAttribute="trailing" id="NTr-sE-rhQ"/>
+                                                <constraint firstItem="zJc-Hp-zdc" firstAttribute="height" secondItem="CsX-j9-JNL" secondAttribute="height" id="f6Z-7g-Xdq"/>
+                                                <constraint firstItem="CsX-j9-JNL" firstAttribute="leading" secondItem="zJc-Hp-zdc" secondAttribute="leading" id="iDS-DS-37E"/>
+                                                <constraint firstAttribute="bottom" secondItem="CsX-j9-JNL" secondAttribute="bottom" constant="20" id="kuJ-d7-f8T"/>
                                                 <constraint firstItem="zJc-Hp-zdc" firstAttribute="leading" secondItem="bLI-Mh-aR8" secondAttribute="leading" constant="50" id="y3z-fJ-cN3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imagesButton" destination="CsX-j9-JNL" id="yAQ-ig-HaF"/>
                                             <outlet property="trailersButton" destination="zJc-Hp-zdc" id="iq2-Ak-BMo"/>
                                         </connections>
                                     </tableViewCell>
@@ -372,11 +385,43 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Q2r-Ki-Ze8" id="hRn-AI-t0y"/>
+                        <segue destination="9oQ-w7-xPG" kind="presentation" identifier="toImages" id="8oD-84-1TO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgm-dG-o0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4370" y="-670"/>
+        </scene>
+        <!--Images View Controller-->
+        <scene sceneID="yCN-Sv-qFG">
+            <objects>
+                <viewController id="9oQ-w7-xPG" customClass="ImagesViewController" customModule="MovieSenseiTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X8L-oN-TOG"/>
+                        <viewControllerLayoutGuide type="bottom" id="n5H-gt-A2d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p1i-Rr-61f">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zOx-0G-YPs">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="zOx-0G-YPs" firstAttribute="leading" secondItem="p1i-Rr-61f" secondAttribute="leading" id="G6i-hs-83R"/>
+                            <constraint firstItem="n5H-gt-A2d" firstAttribute="top" secondItem="zOx-0G-YPs" secondAttribute="bottom" id="Gf3-Iv-YUj"/>
+                            <constraint firstAttribute="trailing" secondItem="zOx-0G-YPs" secondAttribute="trailing" id="aBA-Zu-K1P"/>
+                            <constraint firstItem="zOx-0G-YPs" firstAttribute="top" secondItem="X8L-oN-TOG" secondAttribute="bottom" id="mDQ-R0-cFg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="zOx-0G-YPs" id="tQt-ET-uYj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onI-lW-8CN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4376" y="549"/>
         </scene>
         <!--Series-->
         <scene sceneID="wg7-f3-ORb">

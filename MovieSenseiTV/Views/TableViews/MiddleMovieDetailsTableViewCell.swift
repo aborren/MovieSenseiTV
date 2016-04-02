@@ -11,13 +11,19 @@ import UIKit
 class MiddleMovieDetailsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var trailersButton: UIButton!
-    var onButtonPressFunction: (() -> Void)?
+    @IBOutlet weak var imagesButton: UIButton!
+    var onTrailersButtonPressFunction: (() -> Void)?
+    var onImagesButtonPressFunction: (() -> Void)?
     
-    func setup(onButtonPressFunction: (() -> Void)?) {
-        self.onButtonPressFunction = onButtonPressFunction
+    func setup(onTrailersButtonPressFunction: (() -> Void)?, onImagesButtonPressFunction: (() -> Void)?) {
+        self.onTrailersButtonPressFunction = onTrailersButtonPressFunction
+        self.onImagesButtonPressFunction = onImagesButtonPressFunction
     }
 
     @IBAction func trailersButtonPressed(sender: AnyObject) {
-        self.onButtonPressFunction?()
+        self.onTrailersButtonPressFunction?()
+    }
+    @IBAction func imagesButtonPressed(sender: AnyObject) {
+        self.onImagesButtonPressFunction?()
     }
 }

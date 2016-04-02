@@ -33,6 +33,8 @@
 		A2EA785E1C0A97E200AEDC2F /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA785D1C0A97E200AEDC2F /* APICall.swift */; };
 		A2EA818F1C78D21100596A0B /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA818E1C78D21100596A0B /* MovieDetailsViewController.swift */; };
 		A2EA81931C78D6BC00596A0B /* TopMovieDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EA81921C78D6BC00596A0B /* TopMovieDetailsTableViewCell.swift */; };
+		A2F02DE41CB032B200BC70B2 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F02DE31CB032B200BC70B2 /* ImagesViewController.swift */; };
+		A2F02DE61CB034CF00BC70B2 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F02DE51CB034CF00BC70B2 /* Image.swift */; };
 		B2EA00D31C090A67005FEAD2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D21C090A67005FEAD2 /* Alamofire.framework */; };
 		B2EA00D41C090A67005FEAD2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D21C090A67005FEAD2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2EA00D71C090A6D005FEAD2 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */; };
@@ -86,6 +88,8 @@
 		A2EA785D1C0A97E200AEDC2F /* APICall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		A2EA818E1C78D21100596A0B /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		A2EA81921C78D6BC00596A0B /* TopMovieDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMovieDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		A2F02DE31CB032B200BC70B2 /* ImagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		A2F02DE51CB034CF00BC70B2 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		B2697DB71C08FD26000FE08E /* MovieSenseiTV-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MovieSenseiTV-Bridging-Header.h"; path = "MovieSenseiTV/MovieSenseiTV-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		B2EA00D21C090A67005FEAD2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
 		B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/tvOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				A244F14D1C1CB64F00680816 /* MovieFirstPageCollectionViewCell.swift */,
 				A2EA818E1C78D21100596A0B /* MovieDetailsViewController.swift */,
 				A200D1CE1CAEED7100590B03 /* SeriesViewController.swift */,
+				A2F02DE31CB032B200BC70B2 /* ImagesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				A2EA78581C0A90C100AEDC2F /* Configuration.swift */,
 				A22FFED91C0B41E600325E5F /* Genre.swift */,
 				A200D1D01CAEFD9F00590B03 /* Trailer.swift */,
+				A2F02DE51CB034CF00BC70B2 /* Image.swift */,
 			);
 			path = TMDB;
 			sourceTree = "<group>";
@@ -308,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2EA818F1C78D21100596A0B /* MovieDetailsViewController.swift in Sources */,
+				A2F02DE61CB034CF00BC70B2 /* Image.swift in Sources */,
 				A2994FE11BFFABF500F27627 /* AppDelegate.swift in Sources */,
 				A244F14A1C1CB2F400680816 /* MovieFirstPageTableViewCell.swift in Sources */,
 				A2EA78551C0A8D6F00AEDC2F /* Movie.swift in Sources */,
@@ -323,6 +330,7 @@
 				A2EA78591C0A90C100AEDC2F /* Configuration.swift in Sources */,
 				A244F14E1C1CB64F00680816 /* MovieFirstPageCollectionViewCell.swift in Sources */,
 				A244F1461C1CA27D00680816 /* MoviesViewController.swift in Sources */,
+				A2F02DE41CB032B200BC70B2 /* ImagesViewController.swift in Sources */,
 				A2EA785C1C0A95F600AEDC2F /* NetworkHandler.swift in Sources */,
 				A2EA785E1C0A97E200AEDC2F /* APICall.swift in Sources */,
 				A200D1CF1CAEED7100590B03 /* SeriesViewController.swift in Sources */,

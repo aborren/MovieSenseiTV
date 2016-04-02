@@ -63,7 +63,19 @@ class MovieDetailsViewController: UIViewController {
             }
         }
     }
+    
+    func showImageView() {
+        
+        self.performSegueWithIdentifier("toImages", sender: self)
+        
+    }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let vc = segue.destinationViewController as? ImagesViewController {
+            vc.imageUrl = self.moviePreview?.getBackdropUrl(BackdropSize.original)
+        }
+    }
+    
 }
 
 extension MovieDetailsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -84,7 +96,7 @@ extension MovieDetailsViewController: UITableViewDataSource, UITableViewDelegate
             return topCell
         case 1:
             let middleCell = self.tableView.dequeueReusableCellWithIdentifier("MiddleMovieDetailsTableViewCell", forIndexPath: indexPath) as! MiddleMovieDetailsTableViewCell
-                middleCell.setup(self.showTrailerView)
+                middleCell.setup(self.showTrailerView, onImagesButtonPressFunction: self.showImageView)
                 return middleCell
         default:
                 return UITableViewCell()

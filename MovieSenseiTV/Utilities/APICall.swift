@@ -11,7 +11,7 @@ import Foundation
 struct APICall {
     static let baseUrl = "http://api.themoviedb.org/3/"
     static func movie(id: String)-> String {
-        return baseUrl + "movie/\(id)?append_to_response=videos"
+        return baseUrl + "movie/\(id)?append_to_response=videos,images"
     }
     static let movieNowPlaying = baseUrl + "movie/now_playing"
     static let moviePopular = baseUrl + "movie/popular"

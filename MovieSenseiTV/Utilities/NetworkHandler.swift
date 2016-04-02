@@ -20,6 +20,7 @@ class NetworkHandler {
         .responseJSON { response in
             switch response.result {
             case .Success(let data):
+                debugPrint(JSON(data))
                 let movie = Movie(json: JSON(data))
                 callback(movie: movie, error: nil)
             case .Failure(let error):
