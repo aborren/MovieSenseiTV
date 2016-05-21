@@ -1,4 +1,5 @@
-github "Alamofire/Alamofire" "3.3.0"
-github "onevcat/Kingfisher" "2.2.0"
+github "Alamofire/Alamofire" "3.4.0"
+github "onevcat/Kingfisher" "2.4.1"
+github "rs/SDWebImage" "3.7.6"
 github "SwiftyJSON/SwiftyJSON" "2.3.3"
-github "0xced/XCDYouTubeKit" "2.5.1"
+github "0xced/XCDYouTubeKit" "2.5.2"

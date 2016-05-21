@@ -12,12 +12,18 @@ class MiddleMovieDetailsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var trailersButton: UIButton!
     @IBOutlet weak var imagesButton: UIButton!
+    
+    @IBOutlet weak var synopsisLabel: UILabel!
+    
+    
     var onTrailersButtonPressFunction: (() -> Void)?
     var onImagesButtonPressFunction: (() -> Void)?
     
-    func setup(onTrailersButtonPressFunction: (() -> Void)?, onImagesButtonPressFunction: (() -> Void)?) {
+    func setup(onTrailersButtonPressFunction: (() -> Void)?, onImagesButtonPressFunction: (() -> Void)?, movie: Movie?) {
         self.onTrailersButtonPressFunction = onTrailersButtonPressFunction
         self.onImagesButtonPressFunction = onImagesButtonPressFunction
+        self.synopsisLabel.text = movie?.overview
+        
     }
 
     @IBAction func trailersButtonPressed(sender: AnyObject) {

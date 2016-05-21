@@ -41,6 +41,7 @@
 		B2EA00D81C090A6D005FEAD2 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B2EA00DA1C090E8F005FEAD2 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D91C090E8F005FEAD2 /* SwiftyJSON.framework */; };
 		B2EA00DB1C090E8F005FEAD2 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2EA00D91C090E8F005FEAD2 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BA87A42F1CF0EB1E0026AAF5 /* MovieDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA87A42D1CF0EB1E0026AAF5 /* MovieDetail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -94,6 +95,7 @@
 		B2EA00D21C090A67005FEAD2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/tvOS/Alamofire.framework; sourceTree = "<group>"; };
 		B2EA00D61C090A6D005FEAD2 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/tvOS/Kingfisher.framework; sourceTree = "<group>"; };
 		B2EA00D91C090E8F005FEAD2 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/tvOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		BA87A42E1CF0EB1E0026AAF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MovieDetail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				A244F1441C1CA24800680816 /* ViewControllers */,
 				B2697D821C08FC4A000FE08E /* External Libraries */,
 				A2994FE61BFFABF500F27627 /* Main.storyboard */,
+				BA87A42D1CF0EB1E0026AAF5 /* MovieDetail.storyboard */,
 				A2994FE91BFFABF500F27627 /* Assets.xcassets */,
 				A2994FEB1BFFABF500F27627 /* Info.plist */,
 			);
@@ -284,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA87A42F1CF0EB1E0026AAF5 /* MovieDetail.storyboard in Resources */,
 				A2994FEA1BFFABF500F27627 /* Assets.xcassets in Resources */,
 				A2994FE81BFFABF500F27627 /* Main.storyboard in Resources */,
 			);
@@ -349,6 +353,14 @@
 				A2994FE71BFFABF500F27627 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA87A42D1CF0EB1E0026AAF5 /* MovieDetail.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA87A42E1CF0EB1E0026AAF5 /* Base */,
+			);
+			name = MovieDetail.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

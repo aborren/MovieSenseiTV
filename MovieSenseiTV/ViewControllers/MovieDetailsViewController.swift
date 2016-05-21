@@ -96,7 +96,7 @@ extension MovieDetailsViewController: UITableViewDataSource, UITableViewDelegate
             return topCell
         case 1:
             let middleCell = self.tableView.dequeueReusableCellWithIdentifier("MiddleMovieDetailsTableViewCell", forIndexPath: indexPath) as! MiddleMovieDetailsTableViewCell
-                middleCell.setup(self.showTrailerView, onImagesButtonPressFunction: self.showImageView)
+                middleCell.setup(self.showTrailerView, onImagesButtonPressFunction: self.showImageView, movie: self.movie)
                 return middleCell
         default:
                 return UITableViewCell()
